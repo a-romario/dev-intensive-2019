@@ -44,7 +44,7 @@ fun TimeUnits.toMilliseconds(): Long = when(this) {
 
 fun TimeUnits.plural(value: Int): String = millisecondsInUnits(this.toMilliseconds() * value.toLong(), this)
 
-private fun millisecondsInUnits(value: Long, units: TimeUnits = TimeUnits.SECOND): String {
+fun millisecondsInUnits(value: Long, units: TimeUnits = TimeUnits.SECOND): String {
     val count = when(units) {
         TimeUnits.SECOND -> value / SECOND
         TimeUnits.MINUTE -> value / MINUTE
